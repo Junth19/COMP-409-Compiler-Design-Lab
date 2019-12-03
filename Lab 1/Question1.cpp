@@ -14,7 +14,7 @@ int main()
 {
 	
     char comment[50];
-    int a = 0;
+    int flag = 0;
     
     cout << "Enter Comment:" << endl;
     cin >> comment;
@@ -27,14 +27,14 @@ int main()
             for (int i = 2; i < 50; i++){
                 if(comment[i] == '*' && comment[i + 1] == '/'){
                     cout << "Line is a comment.";
-                    a = 1;
+                    flag = 1;
                     break;
                 }
                 else{
                     continue;
                 }
             }
-            if (a == 0){
+            if (flag == 0){
                 cout << "Line is not a comment.";
             }
         }
